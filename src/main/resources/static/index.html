@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Roman Numeral Converter</title>
+    <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
+    <script type="text/javascript">
+        function registerListener(id) {
+            var frm = $(id);
+            frm.submit(function (e) {
+                e.preventDefault();
+                $.ajax({
+                    type: frm.attr('method'),
+                    url: frm.attr('action'),
+                    data: frm.serialize(),
+                    success: function (data) {
+                        console.log('Submission was successful.');
+                        console.log(data);
+                    },
+                    error: function (data) {
+                        console.log('An error occurred.');
+                        console.log(data);
+                    },
+                });
+            });
+        }
+
+        registerListener("#RomanToNum");
+        registerListener("#NumToRoman");
+
+
+    </script>
+</head>
+<body>
+<form action="/romannum/fromromannumeral" method="post" id="RomanToNum">
+    <label>Input Roman Number</label></br>
+    <input type="text" name="romanNum"></br>
+    <button type="submit">Submit</button>
+</form>
+
+<form action="/romannum/toromannumeral" method="post" id="NumToRoman">
+    <label>Input Integer Number</label></br>
+    <input type="text" name="number"></br>
+    <button type="submit">Submit</button>
+</form>
+
+
+</body>
+</html>

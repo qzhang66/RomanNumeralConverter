@@ -1,8 +1,11 @@
 package com.romannumeralconverter.services;
 
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class RomanNumeralConverterImpl implements RomanNumeralConverter {
     private static final String[] THOUSAND_STRS = {"", "M", "MM", "MMM"};
     private static final String[] HUNDRED_STRS = {"", "C", "CC", "CCC", "CD", "D", "DC", "DCC", "DCCC", "CM"};
