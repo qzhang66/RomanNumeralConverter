@@ -55,11 +55,16 @@ public class RomanNumeralConverterImplTest {
             "CDXLVI, 446",
             "DCC, 700 ",
             "MCCXXXIV, 1234",
-            "MMMCMXCIX, 3999"
+            "MMMCMXCIX, 3999",
     })
-    public void testFromRomanNumeral(String romanNum, int expectedNum) {
+    public void testFromRomanNumeralWhenGivenValidRomanNum(String romanNum, int expectedNum) {
         int actual = romanNumeralConverterImpl.fromRomanNumeral(romanNum);
         assertEquals(expectedNum, actual);
+    }
 
+    @Test(expected = IllegalArgumentException.class)
+    @Parameters({"IIX", "MMMMM", "c", "ABCD"})
+    public void testFromRomanNumeralWhenGivenInvalidRomanNum(String romanNum) {
+        romanNumeralConverterImpl.fromRomanNumeral(romanNum);
     }
 }

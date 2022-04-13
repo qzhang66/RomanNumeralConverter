@@ -16,12 +16,12 @@
                     success: function (data) {
                         console.log('Submission was successful.');
                         console.log(data);
-                        $(resultId).html(data);
-                    },
-                    error: function (data) {
-                        console.log('An error occurred.');
-                        console.log(data);
-                    },
+                        if(data.code == "OK") {
+                            $(resultId).html(data.data);
+                        } else {
+                            $(resultId).html(data.msg);
+                        }
+                    }
                 });
             });
         }

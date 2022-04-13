@@ -4,6 +4,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.regex.Pattern;
 
 @Service
 public class RomanNumeralConverterImpl implements RomanNumeralConverter {
@@ -23,6 +24,10 @@ public class RomanNumeralConverterImpl implements RomanNumeralConverter {
 
     @Override
     public int fromRomanNumeral(String romanNumeral) {
+        boolean isValid = Pattern.matches("^M{0,3}(CM|CD|D?C{0,3})(XC|XL|L?X{0,3})(IX|IV|V?I{0,3})$", romanNumeral);
+        if (!isValid) {
+            throw new IllegalArgumentException("Error: invalid roman numeral. romanNumeral=" + romanNumeral);
+        }
         int sum = 0;
         int length = romanNumeral.length();
 
