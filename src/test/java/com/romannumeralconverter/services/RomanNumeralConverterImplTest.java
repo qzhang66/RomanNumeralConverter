@@ -1,4 +1,4 @@
-package com.romannumeralconverter.RomanNumeralConverter.services;
+package com.romannumeralconverter.services;
 
 import junitparams.JUnitParamsRunner;
 import junitparams.Parameters;

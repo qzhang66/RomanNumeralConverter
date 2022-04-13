@@ -1,4 +1,4 @@
-package com.romannumeralconverter.RomanNumeralConverter.services;
+package com.romannumeralconverter.services;
 
 public interface RomanNumeralConverter {
     int fromRomanNumeral(String romanNumeral);
