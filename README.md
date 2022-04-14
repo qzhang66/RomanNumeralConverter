@@ -29,7 +29,7 @@ regular Arabic number value. Otherwise, it will print error messages.
 
 ### How to set up local environment
 
-1. Clone git repository to local machine.
+1. Clone git repository to your local machine.
 
 ```
 git clone git@github.com:qzhang66/RomanNumeralConverter.git 
@@ -47,7 +47,10 @@ All unit and integration tests can be found under the directory scr/test
 
 1. Open the class ```RomanNumeralConverterApplication``` and run the application.
 
-2. User interface page can be seen in [here](http://localhost:8080/index.html).
+2. User interface page can be seen in
+   ```
+   http://localhost:8080/index.html
+   ```
 
 
 
