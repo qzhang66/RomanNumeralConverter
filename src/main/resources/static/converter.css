@@ -3,7 +3,7 @@ body {
 }
 #content{
    margin: auto;
-   width: 50%;
+   width: 510px;
 }
 form {
     display: inline-block;
@@ -32,14 +32,10 @@ input[type=text]{
    border-radius: 4px;
 }
 
-div {
-    border-radius: 5px;
-    padding: 20px;
-}
-
 #leftForm, #rightForm{
     float: left;
-    width: 45%;
+    width: 210px;
+    padding: 20px;
     border: 1px solid #aaa;
     border-radius: 4px;
 }
@@ -50,10 +46,11 @@ div {
 
 #intResult,#romanResult{
     margin-top: 15px;
-    height: 70px;
+    height: 90px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     width: 80%;
     margin-left: 35px;
+    padding: 20px;
 }
