@@ -1,14 +1,18 @@
 body {
     text-align: center;
-    }
+}
+#content{
+   margin: auto;
+   width: 50%;
+}
 form {
     display: inline-block;
-    }
-#RomanToNum{
-    margin-top:100px;
-    margin-bottom:10px;
 }
-input[type=text], select {
+#RomanToNum, #NumToRoman{
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+input[type=text]{
     width: 100%;
     padding: 12px 20px;
     margin: 8px 0;
@@ -17,12 +21,11 @@ input[type=text], select {
     border-radius: 4px;
     box-sizing: border-box;
 }
+
 .calculatorTile{
    color: #fff;
    background-color: #fc9803;
    font-weight: bold;
-   margin:auto;
-   width:50%;
    border-bottom: 1px solid #aaa;
    padding: 0.3em;
    text-align: center;
@@ -32,4 +35,15 @@ input[type=text], select {
 div {
     border-radius: 5px;
     padding: 20px;
+}
+
+#leftForm, #rightForm{
+    float: left;
+    width: 44%;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+}
+
+#rightForm{
+    clear: right;
 }

@@ -31,21 +31,28 @@
     </script>
 </head>
 <body>
-<div class="calculatorTile">Roman Numeral Converter</div>
-<form action="/romannum/fromromannumeral" method="post" id="RomanToNum">
-    <label>Input Roman Number</label><br/>
-    <input type="text" name="romanNum"><br/>
-    <button onclick="submitForm('#RomanToNum','#intResult')">Submit</button>
-</form>
+<div id="content">
+    <div class="calculatorTile">Roman Numeral Converter</div>
+    <div id="leftForm">
+        <div>Convert Roman Numerals to Arabic Number</div>
+        <form action="/romannum/fromromannumeral" method="post" id="RomanToNum">
+            <label>Input Roman Number</label><br/>
+            <input type="text" name="romanNum"><br/>
+            <button onclick="submitForm('#RomanToNum','#intResult')">Submit</button>
+        </form>
 
-<div id="intResult"></div>
+        <div id="intResult"></div>
+    </div>
 
-<form action="/romannum/toromannumeral" method="post" id="NumToRoman">
-    <label>Input Integer Number</label><br/>
-    <input type="text" name="numberStr"><br/>
-    <button onclick="submitForm('#NumToRoman','#romanResult')">Submit</button>
-</form>
-<div id="romanResult"></div>
-
+    <div id="rightForm">
+        <div>Convert Arabic Number to Roman Numerals</div>
+        <form action="/romannum/toromannumeral" method="post" id="NumToRoman">
+            <label>Input Integer Number</label><br/>
+            <input type="text" name="numberStr"><br/>
+            <button onclick="submitForm('#NumToRoman','#romanResult')">Submit</button>
+        </form>
+        <div id="romanResult"></div>
+    </div>
+</div>
 </body>
 </html>
