@@ -39,11 +39,21 @@ div {
 
 #leftForm, #rightForm{
     float: left;
-    width: 44%;
+    width: 45%;
     border: 1px solid #aaa;
     border-radius: 4px;
 }
 
 #rightForm{
     clear: right;
+}
+
+#intResult,#romanResult{
+    margin-top: 15px;
+    height: 70px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    width: 80%;
+    margin-left: 35px;
 }
