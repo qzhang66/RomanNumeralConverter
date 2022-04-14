@@ -23,11 +23,21 @@ regular Arabic number value. Otherwise, it will print error messages.
 
 ### Prerequisites
 
-* Download and install Intellij IDEA 2021.1.3 (Community Edition)
+* Download and install IntelliJ IDEA 2021.1.3 (Community Edition)
 * Download and install Java 8 SDK
 * Set up one new SDK that points to Java 8
 
 ### How to set up local environment
+
+1. Clone git repository to local machine.
+
+```
+git clone git@github.com:qzhang66/RomanNumeralConverter.git 
+```
+
+2. Open the project in intelliJ.
+
+3. Let Maven build the project itself.
 
 ### Run Tests
 
@@ -35,7 +45,9 @@ All unit and integration tests can be found under the directory scr/test
 
 ### How to Run
 
-* User interface page can be seen in [here](http://localhost:8080/index.html).
+1. Open the class ```RomanNumeralConverterApplication``` and run the application.
+
+2. User interface page can be seen in [here](http://localhost:8080/index.html).
 
 
 
