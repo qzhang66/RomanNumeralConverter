@@ -56,9 +56,9 @@ public class RomanNumeralConverterControllerTest {
         final String baseUrl = "http://localhost:" + port + "/romannum/toromannumeral";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        MultiValueMap<String, Integer> map = new LinkedMultiValueMap<>();
-        map.add("number", 1);
-        HttpEntity<MultiValueMap<String, Integer>> request = new HttpEntity<>(map, headers);
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+        map.add("numberStr", "1");
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
         ResponseEntity<String> response = restTemplate.postForEntity(baseUrl, request, String.class);
 
@@ -72,9 +72,9 @@ public class RomanNumeralConverterControllerTest {
         final String baseUrl = "http://localhost:" + port + "/romannum/toromannumeral";
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        MultiValueMap<String, Integer> map = new LinkedMultiValueMap<>();
-        map.add("number", 0);
-        HttpEntity<MultiValueMap<String, Integer>> request = new HttpEntity<>(map, headers);
+        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
+        map.add("numberStr", "0");
+        HttpEntity<MultiValueMap<String, String>> request = new HttpEntity<>(map, headers);
 
         ResponseEntity<String> response = restTemplate.postForEntity(baseUrl, request, String.class);
 

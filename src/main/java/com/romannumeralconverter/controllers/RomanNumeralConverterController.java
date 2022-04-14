@@ -31,11 +31,17 @@ public class RomanNumeralConverterController {
 
     @PostMapping("/toromannumeral")
     @ResponseBody
-    public ResultVO<String> convertIntToRomanNum(@RequestParam int number) {
+    public ResultVO<String> convertIntToRomanNum(@RequestParam String numberStr) {
         try {
+            int number = Integer.parseInt(numberStr);
             ResultVO<String> result = new ResultVO<>();
             result.setCode(HttpStatus.OK);
             result.setData(romanNumeralConverter.toRomanNumeral(number));
+            return result;
+        } catch (NumberFormatException e) {
+            ResultVO<String> result = new ResultVO<>();
+            result.setCode(HttpStatus.BAD_REQUEST);
+            result.setMsg("Error: input is not integer." + e.getMessage());
             return result;
         } catch (IllegalArgumentException e) {
             ResultVO<String> result = new ResultVO<>();
